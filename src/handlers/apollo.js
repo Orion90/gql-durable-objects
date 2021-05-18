@@ -1,9 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server-cloudflare')
 const { graphqlCloudflare } = require('apollo-server-cloudflare/dist/cloudflareApollo')
-// const {  } = require('apollo-server-cloudflare')
-
 const KVCache = require('../kv-cache')
-const PokemonAPI = require('../datasources/pokeapi')
 const resolvers = require('../resolvers')
 const typeDefs = require('../schema')
 
