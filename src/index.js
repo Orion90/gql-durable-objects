@@ -27,13 +27,14 @@ const graphQLOptions = {
   // Enable CORS headers on GraphQL requests
   // Set to `true` for defaults (see `utils/setCors`),
   // or pass an object to configure each header
-
-  cors: {
-    allowCredentials: 'true',
-    allowHeaders: 'Content-type',
-    allowOrigin: '*',
-    allowMethods: 'GET, POST, PUT',
-  },
+  
+  cors: false,
+  // cors: {
+  //   allowCredentials: 'true',
+  //   allowHeaders: 'Content-type',
+  //   allowOrigin: '*',
+  //   allowMethods: 'GET, POST, PUT',
+  // },
 
   // Enable KV caching for external REST data source requests
   // Note that you'll need to add a KV namespace called

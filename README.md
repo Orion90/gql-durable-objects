@@ -1,18 +1,10 @@
-# 👷 Durable Objects Counter template
+# 👷 Durable Objects Counter template using GraphQL
 
-## NOTE: You must be using wrangler 1.16.0-durable-objects-rc.0 or newer to use this template
+## Installation
+1. Get a copy of wrangler@1.16.0-durable-objects-rc.0
+2. Move `wrangler.toml.example` to `wrangler.toml` and add your `account_id` and update the the name property as well.
+3. Run `wrangler publish --create-class Counter`, this is not needed for subsequent publishes.
+4. Open `<your-worker-url>` and perform some queries and mutations 🎉 🎉 🎉
 
-A template for kick starting a Cloudflare Workers project using:
-
-- Durable Objects
-- Modules (commonjs modules to be specific)
-- Webpack
-- Wrangler
-
-Worker code is in `src/`. The Durable Object `Counter` class is in `src/counter.js`, and the eyeball script is in `index.js`.
-
-Webpack is configured to output a bundled ES Module to `dist/index.mjs`.
-
-This project uses a shim ES module at `src/shim.mjs` that imports the commonjs bundle, and re-exports it. This is necessary because commonjs does not support named exports, and the only way to export a durable object class is using named exports.
-
-On your first publish, you must use `wrangler publish --new-class` to allow the Counter class to implement Durable Objects.
+For further information check out the two projects used as a base for this repo
+Based on [Cloudflare Workers GraphQL Server](https://github.com/cloudflare/workers-graphql-server) and [Cloudflare Durable Objects Counter template](https://github.com/cloudflare/durable-objects-webpack-commonjs)
